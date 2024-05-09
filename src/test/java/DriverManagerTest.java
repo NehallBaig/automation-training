@@ -40,18 +40,19 @@ public class DriverManagerTest {
     public static void initDriver(String browserName) {
         // Task 1 write generic method for creating driver object
         // and return specific driver instance
-
+        
         WebDriver driver;
-        if (browserName.equalsIgnoreCase("chrome")) {
-            driver = new ChromeDriver();
+        if (browserName.equalsIgnoreCase("chrome")){
+            driver=new ChromeDriver();
         } else if (browserName.equalsIgnoreCase("firefox")) {
-            driver = new FirefoxDriver();
+            driver=new FirefoxDriver();
         } else if (browserName.equalsIgnoreCase("edge")) {
-            driver = new EdgeDriver();
-        } else {
+            driver=new EdgeDriver();
+        }
+        else {
             throw new IllegalArgumentException("Unsupported browser");
         }
+      
         return driver;
-
     }
 }
