@@ -34,10 +34,11 @@ public class DriverManagerTest {
      * Initializes a WebDriver instance based on the provided browser name.
      *
      * @param browserName A String representing the name of the browser to be initialized. Supported values are "chrome", "firefox", and "edge".
+     * @return A WebDriver instance corresponding to the specified browser.
      * @throws IllegalArgumentException If an unsupported browser name is provided.
      */
 
-    public static void initDriver(String browserName) {
+    public static WebDriver initDriver(String browserName) {
         // Task 1 write generic method for creating driver object
         // and return specific driver instance
         
