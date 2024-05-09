@@ -36,9 +36,22 @@ public class DriverManagerTest {
      * @param browserName A String representing the name of the browser to be initialized. Supported values are "chrome", "firefox", and "edge".
      * @throws IllegalArgumentException If an unsupported browser name is provided.
      */
+
     public static void initDriver(String browserName) {
         // Task 1 write generic method for creating driver object
         // and return specific driver instance
-    }
 
+        WebDriver driver;
+        if (browserName.equalsIgnoreCase("chrome")) {
+            driver = new ChromeDriver();
+        } else if (browserName.equalsIgnoreCase("firefox")) {
+            driver = new FirefoxDriver();
+        } else if (browserName.equalsIgnoreCase("edge")) {
+            driver = new EdgeDriver();
+        } else {
+            throw new IllegalArgumentException("Unsupported browser");
+        }
+        return driver;
+
+    }
 }
